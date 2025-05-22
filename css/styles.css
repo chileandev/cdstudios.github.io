@@ -1,0 +1,130 @@
+:root {
+  --azul-primario: #1e88e5;  /* Azul vibrante */
+  --azul-oscuro: #0d47a1;     /* Para hover/footer */
+  --blanco: #ffffff;
+  --fondo-blur: rgba(255, 255, 255, 0.8);
+}
+
+/* Reset y Mobile-First */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--blanco);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Bar con Blur */
+.top-bar {
+  background: var(--fondo-blur);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--azul-primario);
+}
+
+.top-bar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.top-bar nav a:hover {
+  color: var(--azul-primario);
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--azul-oscuro);
+}
+
+/* Box de Imágenes */
+.feature-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.box {
+  max-width: 300px;
+  text-align: center;
+}
+
+.box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Botón CTA */
+.cta {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cta-button {
+  background: var(--azul-primario);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: var(--azul-oscuro);
+}
+
+/* Footer */
+.footer {
+  background: var(--azul-oscuro);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .top-bar nav {
+    margin-top: 1rem;
+  }
+  .hero {
+    padding-top: 6rem;
+  }
+} 
